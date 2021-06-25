@@ -118,11 +118,11 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(reviews, index) {
+  console.log(`${reviews[index].name} gave the restaurant a ${reviews[index].rating} review, and their feedback was : "${reviews[index].feedback}"`);
 }
 
-
+getReviewByIndex(reviews,0)
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -137,10 +137,12 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
-} 
+function getLastReview(reviews) {
 
+
+  console.log(`${reviews[reviews.length - 1].name} gave the restaurant a ${reviews[reviews.length - 1].rating} review, and their feedback was : "${reviews[reviews.length - 1].feedback}"`);
+} 
+getLastReview(reviews)
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
