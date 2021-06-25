@@ -49,10 +49,18 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function(special){
+    if(special === "teacher" || special === "student"){
+      this.price = this.price * .75;
+      console.log(burger)
+    }else if(special === "public"){
+      this.price = this.price * .90;
+      console.log(burger)
+    }
+  }
 }
 
-
+burger.discount("public");
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
@@ -197,16 +205,3 @@ function carMaker(/* code here */) {
 }
 
 
-/* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
-function foo(){
-  console.log('its working');
-  return 'bar';
-}
-module.exports = {
-  foo,
-  createMenuItem,
-  burger,
-  addReview,
-  getReviewByIndex,
-  getLastReview,
-}
