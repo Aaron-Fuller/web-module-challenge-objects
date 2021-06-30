@@ -185,10 +185,14 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
+function getLongReviews(reviews) {
+    for (i = 0; i < reviews.length; i++) {
+      if (reviews[i].feedback.match(/(\w+)/g).length >= 15) {
+        console.log(reviews[i])
+      }
+    }
   }
-  
+getLongReviews(reviews)
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
